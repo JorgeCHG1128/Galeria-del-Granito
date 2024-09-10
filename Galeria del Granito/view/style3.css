@@ -1,0 +1,735 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@300;400;500;600;700&display=swap');
+/* General Reset */
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main container */
+.main_box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* Sidebar styles */
+.sidebar_menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Cambiar la propiedad left por right */
+    width: 250px;
+    height: 100%;
+    background: #070525fe;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+    padding-top: 20px;
+    z-index: 3;
+
+}
+
+.sidebar_menu .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar_menu .logo a {
+    color: #d6660b;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sidebar_menu .menu ul {
+    padding: 0;
+}
+
+.sidebar_menu .menu ul li {
+    position: relative;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.sidebar_menu .menu ul li a {
+    display: block;
+    width: 100%;
+    padding: 20px 30px; /* Ajuste el relleno según necesidad */
+    color: #f7efef;/*color de la lectra de la navbar*/
+    font-size: 18px;
+    transition: 0.3s;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.sidebar_menu .menu ul li a:hover {
+    background: #d6660b;
+    color: #fff;
+    padding-left: 30px;
+}
+
+.sidebar_menu .menu ul li i {
+    margin-right: 15px;
+}
+
+.sidebar_menu .social_media {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar_menu .social_media a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    background: #0401262b;
+    color: #bdbdbd;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.sidebar_menu .social_media a:hover {
+    color: #fff;
+    background: #d6660b;
+}
+
+#check:checked ~ .sidebar_menu {
+    right: 0;
+}
+
+/* Hide the checkbox */
+#check {
+    display: none;
+}
+
+/* Button styles */
+.btn_one {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    background: #040126;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 4; /* Asegúrate de que el primer botón tenga un z-index mayor */
+}
+
+.btn_two {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    background: #040126;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 2; /* Z-index menor que el primer botón */
+}
+
+.btn_one:hover, .btn_two:hover {
+    background: #d6660b;
+    color: #fff;
+}
+.btn_two {
+    left: auto;
+    right: 15px; /* Ajustar la posición del segundo botón */
+    transition: all 0.3s ease;
+}
+
+#check:checked ~ .btn_two {
+    left: auto;
+    right: 220px; /* Fixed the button positioning */
+    color: #310bbc;
+}
+
+
+#check:checked ~ .btn_one {
+    display: none;
+}
+
+.main_section { 
+    background-image: url('fotos/calacata-book_a1_rgb.preview.jpg');
+    background-size: cover; /* Ajusta la imagen dentro del contenedor sin distorsionarla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen en el contenedor */
+    background-attachment: fixed; /* Fija la imagen en su posición para que no se desplace con el scroll */
+    color: #070400;
+    text-align: center;
+    padding: 100px 0;
+    font-family: "sans-serif";
+}
+
+
+
+.section_content {
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+
+.main_section h2 {
+    font-size: 5em;
+    margin-bottom: 20px;
+    color: #000000df;
+    margin-top: 0px;
+    font-family: 'Inter', sans-serif;
+}
+
+.main_section h1 {
+    font-size: 5em;
+    margin-bottom: 20px;
+    color: #e95004;
+    margin-top: 0px;
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap; /*Para que el texto no se ponga encima del otro*/
+}
+
+.main_section p {
+    font-size: 1.3em;
+    line-height: 1.4;
+    margin-bottom: 30px;
+
+}
+ 
+
+   .feature-content {
+        max-width: 800px; /* Ajusta este valor según el espacio disponible */
+        margin: auto;
+    }
+
+    .feature-content p {
+        font-size: 19px;
+        color: #050505;
+        margin: auto;
+        align-content: center;
+    }
+
+
+
+/* Estilo del logo */
+.logo {
+    position: flex;
+    top: 150px;
+    left: 520px;
+    padding: 10px;
+    z-index: 999;
+}
+
+.logo img {
+    max-width: 250px; /* Initial logo width */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 768px) {
+    .logo img {
+        max-width: 0px; /* Adjusted logo size */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        max-width: 30px; /* Adjusted logo size */
+    }
+}
+
+
+/* CARD */
+.card-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .card {
+    width: 300px;
+    background-color: #04011d;
+    color: #bdbdbd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px  #ffff;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 20px #babecc, -10px -10px 20px #ffffff;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-content p {
+    margin-bottom: 10px;
+    
+  }
+
+
+
+
+
+  
+  
+  .btn {
+    background-color: #f07604;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+
+
+  /*social- media*/
+  #social_check {
+    display: none;
+}
+
+
+
+.social_media_btn {
+    position: fixed;
+    top: 15px;
+    right: 120px;
+    z-index: 2;
+    background: #040126;
+    border: none;
+    border-radius: 50%;
+}
+
+/* Ajustamos el estilo del botón de redes sociales */
+.social_media_btn label {
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.social_media_btn label:hover {
+    background: #d6660b;
+    color: #fff;
+}
+
+.social_media_icons {
+    position: absolute;
+    top: calc(100% + 5px); /* Posicionamos los iconos justo debajo del botón */
+    right: 50%; /* Centramos horizontalmente */
+    transform: translateX(50% + 5px); /* Centramos horizontalmente */
+    display: none;
+    background: #040126; /* Ajustamos el color de fondo */
+    border-radius: 5px; /* Agregamos bordes redondeados */
+    padding: 10px; /* Agregamos espacio interno */
+}
+
+.social_media_icons a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px; /* Agregamos bordes redondeados */
+    transition: all 0.3s ease;
+}
+
+.social_media_icons a:hover {
+    background: #d6660b;
+}
+
+
+
+/* Estilos para el contenedor de los botones */
+/* Estilos para el contenedor de los botones */
+.quick_access_menu {
+    position: relative;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    flex-wrap: wrap; /* Permite que los botones se ajusten en filas */
+}
+
+.quick_access_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.quick_access_menu li {
+    margin: 10px; /* Espacio entre los botones */
+}
+
+.quick_access_menu .main-button {
+    background-color: #f26609;
+    color: #fff;
+    padding: 35px 60px; /* Botones más grandes */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+}
+
+.quick_access_menu .main-button:hover {
+    background-color: #a44d08;
+    transform: scale(1.1);
+}
+
+.quick_access_menu .sub-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quick_access_menu .sub-menu.active {
+    display: flex;
+}
+
+.quick_access_menu .sub-menu a {
+    background-color: #fff;
+    color: #06022d;
+    padding: 20px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.quick_access_menu .sub-menu a:hover {
+    background-color: #a44d08;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.quick_access_menu a {
+    background-color: #a44d08;
+    color: #fff;
+    transform: scale(1.05);
+    border-radius: 100px;
+    color: #06022d;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+
+
+
+/*Floter*/
+
+/* Añadir margen inferior a la galería */
+.gallery-section {
+    padding-bottom: 50px; /* Añadir margen inferior */
+}
+
+/* Footer */
+footer {
+    background-color: #04022df4;
+    color: #ee8915;
+    left: 100px;
+    padding: 200px;
+    position: Flex;
+    bottom: 0;
+  
+}
+
+footer p {
+    margin: 0;
+}
+
+
+footer a {
+    color: #fff; /* Color del enlace */
+    text-decoration: none; /* Subrayado enlaces */
+}
+
+footer a:hover {
+    color: #f4f1ee; /* Cambia color en hover */
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.gallery-section {
+    padding-bottom: 50px; /* Añadir margen inferior */
+}
+
+
+.gallery-item {
+    flex: 1 1 calc(25% - 40px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    max-width: 400px;
+    height: 200px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gallery-item {
+    opacity: 0; /* Initial state for animation */
+    animation: fadeIn 0.5s ease forwards; /* Animation settings */
+}
+
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+}
+
+#modal-caption {
+    text-align: center;
+    color: #ccc;
+    padding: 5px 5px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* General styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.main_section2 {
+    padding: 50px 0;
+}
+
+.contact-card, .map-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover, .map-card:hover {
+    transform: translateY(-10px);
+}
+
+.contact-card h2, .map-card h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #e95004;
+}
+
+.contact-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-card p, .contact-card ul {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.contact-card ul {
+    padding-left: 20px;
+}
+
+.contact-card ul li {
+    margin-bottom: 5px;
+}
+
+.contact-card ul li i {
+    margin-right: 10px;
+    color: #e95004;
+}
+
+.map-card .map {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .contact-card, .map-card {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-card h2, .map-card h2 {
+        font-size: 24px;
+    }
+
+    .contact-card h3 {
+        font-size: 18px;
+    }
+
+    .contact-card p, .contact-card ul {
+        font-size: 14px;
+    }
+}
+
+
+
+
+/*Social Buttons info*/
+/* Estilos para los botones de redes sociales */
+.social-buttons {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center;
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.social-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f07604; /* Color naranja */
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.social-btn:hover {
+    background-color: #a44d08; /* Color naranja oscuro al pasar el ratón */
+}
+
+/* Ajuste individual para cada red social si es necesario */
+.insta-btn {
+    background-color: #f07604; /* Color específico para Instagram */
+}
+
+.fb-btn {
+    background-color: #f07604; /* Color específico para Facebook */
+}
+
+.gmail-btn {
+    background-color: #f07604; /* Color específico para Gmail */
+}
+
+.whatsapp-btn {
+    background-color: #f07604; /* Color específico para WhatsApp */
+}

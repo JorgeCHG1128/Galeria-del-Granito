@@ -1,0 +1,630 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@300;400;500;600;700&display=swap');
+/* General Reset */
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main container */
+.main_box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Sidebar styles */
+.sidebar_menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Cambiar la propiedad left por right */
+    width: 250px;
+    height: 100%;
+    background: #070525fe;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+    padding-top: 20px;
+    z-index: 3;
+
+}
+
+.sidebar_menu .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar_menu .logo a {
+    color: #d6660b;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sidebar_menu .menu ul {
+    padding: 0;
+}
+
+.sidebar_menu .menu ul li {
+    position: relative;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.sidebar_menu .menu ul li a {
+    display: block;
+    width: 100%;
+    padding: 20px 30px; /* Ajuste el relleno según necesidad */
+    color: #f7efef;
+    font-size: 18px;
+    transition: 0.3s;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /*posible cambio*/
+}
+
+.sidebar_menu .menu ul li a:hover {
+    background: #d6660b;
+    color: #fff;
+    padding-left: 30px;
+}
+
+.sidebar_menu .menu ul li i {
+    margin-right: 15px;
+}
+
+.sidebar_menu .social_media {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar_menu .social_media a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    background: #0401262b;
+    color: #bdbdbd;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.sidebar_menu .social_media a:hover {
+    color: #fff;
+    background: #d6660b;
+}
+
+#check:checked ~ .sidebar_menu {
+    right: 0; /* Cambiar la propiedad left por right */
+}
+
+/* Hide the checkbox */
+#check {
+    display: none;
+}
+
+.btn_one {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    background: #040126;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 4; /* Asegúrate de que el primer botón tenga un z-index mayor */
+}
+
+.btn_two {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    background: #040126;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 2; /* Z-index menor que el primer botón */
+}
+
+.btn_one:hover, .btn_two:hover {
+    background: #d6660b;
+    color: #fff;
+}
+
+.btn_two {
+    left: auto;
+    right: 15px; /* Ajustar la posición del segundo botón */
+    transition: all 0.3s ease;
+}
+
+#check:checked ~ .btn_close {
+    right: auto; /* Ajustar la posición del segundo botón */
+    left: 220px;
+    color: #310bbc;
+}
+
+#check:checked ~ .btn_two {
+    left: auto;
+    right: 220px; /* Adjusted positioning */
+    color: #310bbc;
+}
+
+#check:checked ~ .btn_one {
+    display: none;
+}
+
+.main_section {
+    background-image: url('fotos/calacata-book_a1_rgb.preview.jpg');
+    background-size: cover; /* Ajusta la imagen dentro del contenedor sin distorsionarla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen en el contenedor */
+    background-attachment: fixed; /* Fija la imagen en su posición para que no se desplace con el scroll */
+    color: #070400;
+    text-align: center;
+    padding: 100px 0;
+    font-family: "sans-serif";
+}
+
+.section_content {
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+
+.main_section h2 {
+    font-size: 5em;
+    margin-bottom: 20px;
+    color: #000000df;
+    margin-top: 0px;
+    font-family: 'Inter', sans-serif;
+}
+
+.main_section p {
+    font-size: 1.3em;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.granite_types {
+    display: flex;
+    justify-content: space-around; /* Distribuye uniformemente los elementos a lo largo del contenedor */
+    align-items: center; /* Centra verticalmente los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no hay suficiente espacio */
+}
+
+.granite_type {
+    width: 30%; /* Ancho de cada tipo de granito */
+    margin-bottom: 30px; /* Espacio entre cada tipo de granito */
+    text-align: center; /* Alineación del texto al centro */
+    padding: 20px; /* Espacio interno */
+    background: rgba(0, 0, 0, 0.914); /* Fondo semi-transparente para resaltar el contenido */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(31, 7, 118, 0.1); /* Sombra suave */
+    color: azure;
+    transition: transform 0.3s ease; /* Agrega una transición suave para el efecto de zoom */
+}
+
+.granite_type:hover {
+    transform: scale(1.05); /* Aplica un ligero zoom cuando se pasa el cursor sobre el tipo de granito */
+}
+
+.granite_type img {
+    width: 100%;
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* La imagen se ajusta para cubrir el contenedor manteniendo su relación de aspecto */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.granite_type h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.granite_type p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: center; /* Alineación del texto a la izquierda */
+}
+
+/* Estilo del logo */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    z-index: 999;
+}
+/* Estilo del logo */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    z-index: 999;
+}
+
+.logo img {
+    max-width: 230px; /* Initial logo width */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        max-width: 0px; /* Adjusted logo size */
+    }
+}
+@media (max-width: 480px) {
+    .logo img {
+        max-width: 30px; /* Adjusted logo size */
+    }
+}
+
+/* social media*/
+
+
+#social_check {
+    display: none;
+}
+
+
+
+.social_media_btn {
+    position: fixed;
+    top: 15px;
+    right: 120px;
+    z-index: 2;
+    background: #040126;
+    border: none;
+    border-radius: 50%;
+}
+
+/* Ajustamos el estilo del botón de redes sociales */
+.social_media_btn label {
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.social_media_btn label:hover {
+    background: #d6660b;
+    color: #fff;
+}
+
+.social_media_icons {
+    position: absolute;
+    top: calc(100% + 5px); /* Posicionamos los iconos justo debajo del botón */
+    right: 50%; /* Centramos horizontalmente */
+    transform: translateX(50% + 5px); /* Centramos horizontalmente */
+    display: none;
+    background: #040126; /* Ajustamos el color de fondo */
+    border-radius: 5px; /* Agregamos bordes redondeados */
+    padding: 10px; /* Agregamos espacio interno */
+}
+
+.social_media_icons a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px; /* Agregamos bordes redondeados */
+    transition: all 0.3s ease;
+}
+
+.social_media_icons a:hover {
+    background: #d6660b;
+}
+
+/*Footer*/
+
+/* Footer */
+footer {
+    background-color: #04022df4;
+    color: #ee8915;
+    left: 100px;
+    padding: 200px;
+    position: Flex;
+    bottom: 0;
+  
+}
+
+footer p {
+    margin: 0;
+}
+
+
+footer a {
+    color: #fff; /* Color del enlace */
+    text-decoration: none; /* Subrayado enlaces */
+}
+
+footer a:hover {
+    color: #f4f1ee; /* Cambia color en hover */
+}
+
+
+
+/*Social Buttons info*/
+/* Estilos para los botones de redes sociales */
+.social-buttons {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center;
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.social-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f07604; /* Color naranja */
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.social-btn:hover {
+    background-color: #a44d08; /* Color naranja oscuro al pasar el ratón */
+}
+
+/* Ajuste individual para cada red social si es necesario */
+.insta-btn {
+    background-color: #f07604; /* Color específico para Instagram */
+}
+
+.fb-btn {
+    background-color: #f07604; /* Color específico para Facebook */
+}
+
+.gmail-btn {
+    background-color: #f07604; /* Color específico para Gmail */
+}
+
+.whatsapp-btn {
+    background-color: #f07604; /* Color específico para WhatsApp */
+}
+
+
+
+/* Estilos para la sección principal */
+.main_section2 {
+    background-image: url('fotos/calacata-book_a1_rgb.preview.jpg');
+    background-size: cover; /* Ajusta la imagen dentro del contenedor sin distorsionarla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen en el contenedor */
+    background-attachment: fixed; /* Fija la imagen en su posición para que no se desplace con el scroll */
+    color: #070400;
+    text-align: center;
+    padding: 100px 0;
+    font-family: "sans-serif";
+    padding: 50px 0;
+}
+
+/* Contenedor interno 2 */
+.main_section2 .container {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+/* Estilos para las columnas */
+.col-md-6 {
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-align: left; /* Alineación del texto a la izquierda */
+    
+}
+.col-md-6 h3{
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left; /* Alineación del texto a la izquierda */
+
+}
+
+/* Estilos para cada fila de contenido */
+.main_section2 .row {
+    display: flex; /* Utiliza un layout de filas flexibles */
+    justify-content: space-between; /* Distribuye uniformemente los elementos en la fila */
+    align-items: center; /* Alinea los elementos verticalmente */
+}
+
+/* Estilos para las columnas (Información de contacto y Mapa) */
+.main_section2 .col-md-6 {
+    flex: 0 10 8%; /* Establece el ancho de cada columna */
+}
+
+/* Estilos para el mapa */
+.main_section2 .map {
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Estilos para los elementos dentro del mapa (iframe) */
+.main_section2 .map iframe {
+    width: 150%; /* Ajusta el ancho al 100% del contenedor */
+    height: 450px; /* Altura fija */
+    border: 0; /* Sin borde */
+}
+
+.main_section2 h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #000000;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.main_section2 p {
+    font-size: 1.3em;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.contact-info{
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+
+/*Mapa*/
+
+.map {
+    margin-bottom: 20px;
+    padding: 20px; /* Relleno para separación del borde */
+    width: calc(170% - 100px); /* Ancho del 50% menos el relleno */
+}
+
+.map h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.map iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/*galeria slide */
+
+/* Gallery CSS */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    max-width: 1200px; /* Adjust the max width to your liking */
+    margin: 40px auto;
+  }
+  
+  .gallery-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Set a fixed width for the gallery container */
+    height: 300px; /* Set a fixed height for the gallery container */
+    overflow: hidden; /* Hide any overflow to maintain the fixed size */
+  }
+  
+  .gallery-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .gallery-slide {
+    display: none; /* Hide all slides initially */
+  }
+  
+  .gallery-slide img {
+    width: 100%;
+    height: 100%; /* Adjust the height to your liking */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .gallery-slide img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+  }
+  
+  .dot-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .dot:hover {
+    background-color: #717171;
+  }
+  
+  .dot.active {
+    background-color: #717171;
+  }
+
+
+  /*Tablas*/
+
+  .image-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none; /* Remove table borders */
+  }
+  
+  .image-table td {
+    width: 25%; /* Adjust the width to fit 4-5 images per row */
+    padding: 10px;
+    border: none; /* Remove table cell borders */
+  }
+  
+  .image-table img {
+    width: 100%;
+    height: 150px; /* Adjust the height to fit your image size */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add image shadows */
+  }
+
+
+  

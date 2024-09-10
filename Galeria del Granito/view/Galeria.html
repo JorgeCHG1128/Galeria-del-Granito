@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galería del Granito</title>
+<link rel="stylesheet" href="style2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+<link rel="shortcut icon" href="fotos/icon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Barra de navegación y menú desplegable -->
+    <div class="main_box">
+        <header>
+            <div class="logo">
+                <a href="vista.html"><img src="fotos/logoGG.png" alt="Logo"></a>
+            </div>
+        </header>
+
+        <!-- Botón de menú -->
+        <input type="checkbox" id="check">
+        <div class="btn_one">
+            <label for="check">
+                <i class="fas fa-bars"></i>
+            </label>
+        </div>
+        
+        <!-- Menú lateral -->
+        <div class="sidebar_menu">
+            <div class="logo">
+                <a href="#"></a>
+            </div>
+            <div class="btn_two">
+                <label for="check">
+                    <i class="fas fa-times"></i>
+                </label>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><i ></i><a href="vista.html">Principal</a></li>
+                    <li><i></i><a href="Galeria.html">Galeria</a></li>
+                    <li><i></i><a href="Contacto.html">Contactos</a></li>
+                    <li><i></i><a href="Proyectos.html">Proyectos</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="social_media_btn">
+        <input type="checkbox" id="social_check">
+        <label for="social_check"><i class="fas fa-share-alt"></i></label>
+        <div class="social_media_icons">
+            <a href="https://www.facebook.com/search/top/?q=galeria%20del%20granito"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.link/awjupt"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/galeria_del_granito?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+            <a href="mailto:galeriadelgranito@gmail.com"><i class="fa fa-envelope"></i></a>
+        </div>
+    </div>
+
+    <!-- Sección Principal -->
+    <section class="main_section">
+        <div class="section_content">
+            <h2>Productos</h2>
+
+            <nav class="quick_access_menu">
+                <ul>
+                    <li>
+                        <a href="#" class="main-button" onclick="toggleSubMenu('granito')">Granito</a>
+                        <div id="sub-menu-granito" class="sub-menu">
+                            <a href="#" onclick="loadGallery('granito', 'claros')">Claros</a>
+                            <a href="#" onclick="loadGallery('granito', 'oscuros')">Oscuros</a>
+                            <a href="#" onclick="loadGallery('granito', 'exoticos')">Exóticos</a>
+                        </div>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="#" class="main-button" onclick="toggleSubMenu('cuarzo')">Cuarzo</a>
+                        <div id="sub-menu-cuarzo" class="sub-menu">
+                            <a href="#" onclick="loadGallery('cuarzo', 'claros')">Claros</a>
+                            <a href="#" onclick="loadGallery('cuarzo', 'oscuros')">Oscuros</a>
+                            <a href="#" onclick="loadGallery('cuarzo', 'exoticos')">Exóticos</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+      
+            <h1 id="section-title">Nuestro Material</h1>
+            <div id="section-description" class="feature-content">
+                <p>¡Aquí nos presentamos, los productos de granito, y queremos expresar nuestra admiración por la calidad y el diseño que nos han dado vida. Como piezas únicas y exclusivas, nos sentimos orgullosos de ser parte de tus proyectos y espacios.
+                    Nuestro granito es de una calidad excepcional. Cada pieza ha sido cuidadosamente seleccionada y trabajada para asegurar una durabilidad y resistencia incomparables. Nuestro acabado es impecable, con un pulido que resalta la belleza natural del material.
+                    Nuestros diseños son verdaderamente innovadores y creativos. Logramos combinar a la perfección la elegancia y la funcionalidad, creando piezas que no solo son hermosas, sino también prácticas y versátiles. Ya sea en encimeras de cocina, mesadas de baño o elementos decorativos, nos destacamos por nuestro estilo único y atemporal.
+                    Nuestra versatilidad es uno de nuestros puntos fuertes. Podemos adaptarnos a una amplia gama de estilos y ambientes, desde los más modernos y minimalistas hasta los más tradicionales y elegantes. Esta cualidad nos convierte en una opción ideal para cualquier proyecto de diseño o construcción.
+                    Y no solo nos sentimos orgullosos de nuestra calidad y diseño, sino también del excelente servicio que nos brindas. Tu dedicación a nuestros clientes es impresionante, y nos alegra ser parte de tus proyectos y espacios.
+                </p>
+            </div>
+        
+            <div class="gallery" id="gallery-content">
+                <!-- Gallery items will be loaded here dynamically -->
+            </div>
+        
+            <!-- Modal -->
+            <div id="image-modal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modal-image">
+                <div id="modal-caption"></div>
+            </div>
+
+        </section>  
+       <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Acerca de Nosotros</h3>
+                        <p>¡Bienvenido a nuestra página web! Somos una empresa dedicada a la exportacion, <br>
+                        manipulacion y venta de Granito <br> 
+                        Galería del Granito en Costa Rica se especializa en la venta y transformación de granito y cuarzos para diversos usos.<br>
+                        Ofrecemos productos como encimeras para cocinas y baños, revestimientos, pisos, y otros elementos decorativos.<br>
+                        La empresa combina técnicas industriales modernas con materiales de alta calidad para ofrecer soluciones estructurales y ornamentales.<br>
+                        Además, brindan servicios de instalación y asesoramiento personalizado para sus clientes.</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Enlaces Útiles</h3>
+                        <ul>
+                            <div class="social-buttons">
+                                <a href="https://www.instagram.com/galeria_del_granito?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-btn insta-btn">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.facebook.com/search/top/?q=galeria%20del%20granito" target="_blank" class="social-btn fb-btn">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="mailto:galeriadelgranito@gmail.com" target="_blank" class="social-btn gmail-btn">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <a href="https://wa.link/awjupt" target="_blank" class="social-btn whatsapp-btn">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </ul>
+                    </div>  
+                    <div class="col-md-3">
+                        <h3>Contacto</h3>
+                        <p>Dirección: 500 metros Oeste del Banco Nacional (Fábrica)
+                            sobre la radial a Grecia, Alajuela, Costa Rica.</p>
+                        <p>Teléfono: (506) 2495-0606</p>
+                        <h3>Correos</h3>
+                        <p>galeriadelgranito@gmail.com<br>
+                        efchacon@galeriadelgranito.com <br>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+    <script src="app.js"></script>
+</body>
+</html>
